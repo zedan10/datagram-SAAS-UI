@@ -6,6 +6,11 @@ import InnovationImg from '../assets/innovation.jpg';
 import history from './history';
 
 export default class DesktopMenubar extends Component {
+  
+    showLoginModal = () => {
+      window.dispatchEvent(new CustomEvent('showLogin', {}));
+    }
+
     render() {
       const { children } = this.props
   
@@ -18,7 +23,7 @@ export default class DesktopMenubar extends Component {
                   <Menu.Item as='a' onClick={() => history.push('/about')}>About</Menu.Item>
                   <Menu.Item as='a'>Services</Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' onClick={() => history.push('/dashboard')} inverted>Log in</Button>
+                    <Button as='a' onClick={this.showLoginModal} inverted>Log in</Button>
                     <Button as='a' onClick={() => history.push('/sign-up')} inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
                   </Menu.Item>
                 </Container>
