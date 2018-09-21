@@ -1,7 +1,9 @@
 import React from 'react';
-import { Form, Checkbox, Segment, Header, Grid, Button, Menu, Container } from 'semantic-ui-react';
+import { Form, Checkbox, Segment, Header, Grid, Button, Menu, Container, Image } from 'semantic-ui-react';
 import PhotoCarousel from './photo-carousel';
 import history from '../history';
+
+import signUpImg from '../../assets/mac-data.jpeg';
 
 const image_list = ['https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 'https://images.pexels.com/photos/970198/pexels-photo-970198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260']
 class SignUp extends React.Component {
@@ -24,32 +26,35 @@ class SignUp extends React.Component {
                     </Container>
                 </Menu>
                 <Segment style={{ padding: '2em 0em' }}>
-                    <Grid container verticalAlign='middle'>
+                    <Grid container>
                         <Header as='h3' style={{ fontSize: '2em' }}>Sign up to access all of Datagram's services</Header>
-                        <Grid.Row>
-                                <Form>
-                                    <Form.Field>
-                                        <label>Business Email</label>
-                                        <input placeholder='Business email' />
-                                    </Form.Field>
-                                    <Form.Field>
-                                        <label>Password</label>
-                                        <input placeholder='Secure password' />
-                                    </Form.Field>
-                                    <Form.Field>
-                                        <label>Business Name</label>
-                                        <input placeholder='Business name' />
-                                    </Form.Field>
-                                    <Form.Field>
-                                        <label>Contact Number</label>
-                                        <input placeholder='Primary contact number' />
-                                    </Form.Field>
-                                    <Form.Field>
-                                        <Checkbox label='I agree to the Terms and Conditions' />
-                                    </Form.Field>
-                                    <Button type='submit'>Submit</Button>
-                                </Form>
-                        </Grid.Row>
+                        <Grid.Column computer={9}>
+                            <Form>
+                                <Form.Field>
+                                    <label>Business Email</label>
+                                    <input placeholder='Business email' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>Password</label>
+                                    <input placeholder='Secure password' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>Business Name</label>
+                                    <input placeholder='Business name' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>Contact Number</label>
+                                    <input placeholder='Primary contact number' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <Checkbox label='I agree to the Terms and Conditions' />
+                                </Form.Field>
+                                <Button type='submit'>Submit</Button>
+                            </Form>
+                        </Grid.Column>
+                        <Grid.Column computer={7}>
+                            <Image src={signUpImg} size="huge"/>
+                        </Grid.Column>
                     </Grid>
                 </Segment>
                 <PhotoCarousel photo_list={image_list}/>

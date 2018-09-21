@@ -5,7 +5,7 @@ import { IoLogoLinkedin } from 'react-icons/io';
 class Footer extends Component {
     render() {
         return(
-            <Segment inverted vertical style={{ padding: '5em 0em', background: 'rgba(9, 0, 255)' }}>
+            <Segment inverted vertical style={{ padding: '5em 0em', backgroundColor: '#3f51b5' }}>
                 <Container>
                     <Grid>
                     <Grid.Row>
